@@ -1,9 +1,6 @@
 import pandas as pd
+import pandas.api.types as ptypes
 import numpy as np
-import pytest
-from concrete_strength_prediction.utils.data_manager import DataManager 
-
-path_data = 'https://archive.ics.uci.edu/ml/machine-learning-databases/concrete/compressive/Concrete_Data.xls'
 
 cols_mapping = {
     'Cement (component 1)(kg in a m^3 mixture)': 'cement',
@@ -17,18 +14,16 @@ cols_mapping = {
     'Concrete compressive strength(MPa, megapascals) ': 'strength',
 }
 
-# TODO create fixture
-dm = DataManager(path_data, cols_mapping)
-
-def test_assert_true():
-    assert True    
 class TestDataManager(object):
-
-    
-    def test_columns_names_are_based_on_mapping(self):
-        np.array_equal(dm.df.columns.tolist(), list(cols_mapping.values()))
-    dm.load_dataset()
         
-    def test_imports_as_dataframe(self):
+    def test_columns_names_are_based_on_mapping(self, dm):
+        assert np.array_equal(dm.df.columns.tolist(), list(cols_mapping.values()))
+        
+    def test_imports_as_dataframe(self, dm):
         assert isinstance(dm.df, pd.DataFrame)
         assert isinstance(dm.get_data(), pd.DataFrame)
+ 
+    def test_data(self, dm):
+        assert len(dm.df.shape) == 2
+        assert dm.df.shape[1] == len(cols_mapping.keys())
+        assert all([ptypes.is_numeric_dtype(dm.df[col])  for col in dm.df.columns])
