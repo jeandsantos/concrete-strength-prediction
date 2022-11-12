@@ -2,6 +2,9 @@
 *.code-workspace
 .vscode
 
+# Other Files
+*.ipynb
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
