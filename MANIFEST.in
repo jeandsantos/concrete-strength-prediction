@@ -1,0 +1,18 @@
+include AUTHORS.rst
+include CONTRIBUTING.rst
+include HISTORY.rst
+include LICENSE
+include README.rst
+include *.pkl
+include *.md
+include *.txt
+
+recursive-include ./concrete_strength_prediction/*
+
+include ./concrete_strength_prediction/trained_models/*.pkl
+include ./concrete_strength_prediction/config.yml
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+
+recursive-include docs *.rst conf.py Makefile make.bat *.jpg *.png *.gif

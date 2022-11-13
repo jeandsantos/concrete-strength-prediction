@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = python -msphinx
-SPHINXPROJ    = concrete_strength_model
+SPHINXPROJ    = concrete_strength_prediction
 SOURCEDIR     = .
 BUILDDIR      = _build
 
