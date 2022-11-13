@@ -87,9 +87,9 @@ cv_folds: 10
 
 mlflow_bool: False
 mlflow_tracking_uri: 'http://localhost:5000'
-mlflow_experiment_name: 'concrete-mixtures'
+mlflow_experiment_name: 'concrete-strength-prediction'
 
-project_name: 'concrete-mixture-optimization'
+project_name: 'concrete-strength-prediction'
 
 # Other Parameters
 bool_verbose: True
