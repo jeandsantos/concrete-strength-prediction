@@ -1,12 +1,13 @@
 from pathlib import Path
 from typing import Dict, List, Sequence
+
 from pydantic import BaseModel
 from strictyaml import YAML, load
 
 # Directories
 PATH_PACKAGE = Path(__file__).resolve().parent.parent
-PATH_CONFIG_FILE = PATH_PACKAGE / 'config.yml'
-PATH_MODELS = PATH_PACKAGE / 'trained_models'
+PATH_CONFIG_FILE = PATH_PACKAGE / "config.yml"
+PATH_MODELS = PATH_PACKAGE / "trained_models"
 
 # Feature Engineering Parameters
 class SmartCorrelationModel(BaseModel):
@@ -14,25 +15,28 @@ class SmartCorrelationModel(BaseModel):
     method: str
     selection_method: str
     missing_values: str
-    
+
+
 class ConstantParamsModel(BaseModel):
-    tol: int 
+    tol: int
     missing_values: str
 
-# Configurations    
+
+# Configurations
 class AppConfig(BaseModel):
     """Application-level configuration"""
-    
+
     project_name: str
     path_data: str
     mlflow_bool: bool
-    mlflow_tracking_uri: str 
+    mlflow_tracking_uri: str
     mlflow_experiment_name: str
     bool_verbose: bool
 
+
 class ModelConfig(BaseModel):
     """All configurations related to the model"""
-    
+
     cols_mapping: Dict[str, str]
     cols_features: List[str]
     cols_composition: List[str]
@@ -54,13 +58,14 @@ class ModelConfig(BaseModel):
     n_jobs: int
     n_features: int
 
+
 class Config(BaseModel):
     """Master Configuration Object"""
-    
+
     config_app: AppConfig
     config_model: ModelConfig
-    
-    
+
+
 def get_config_file_path() -> Path:
     """
     Locate and return the path of the configuration file
@@ -104,5 +109,6 @@ def get_and_validate_config(config_parsed: YAML = None) -> Config:
 
     return config_validated
 
+
 config = get_and_validate_config()
-print('Validation Completed')
+print("Validation Completed")
