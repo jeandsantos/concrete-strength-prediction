@@ -46,7 +46,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Concrete Mixture Optimization'
+project = 'Concrete Strength'
 copyright = "2022, Jean Dos Santos"
 author = "Jean Dos Santos"
 
@@ -64,7 +64,7 @@ release = concrete_strength_prediction.__version__
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -128,7 +128,7 @@ latex_elements = {
 # [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'concrete_strength_prediction.tex',
-     'Concrete Mixture Optimization Documentation',
+     'Concrete Strength Documentation',
      'Jean Dos Santos', 'manual'),
 ]
 
@@ -139,7 +139,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     (master_doc, 'concrete_strength_prediction',
-     'Concrete Mixture Optimization Documentation',
+     'Concrete Strength Documentation',
      [author], 1)
 ]
 
@@ -151,7 +151,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
     (master_doc, 'concrete_strength_prediction',
-     'Concrete Mixture Optimization Documentation',
+     'Concrete Strength Documentation',
      author,
      'concrete_strength_prediction',
      'One line description of project.',
