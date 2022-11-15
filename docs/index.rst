@@ -1,5 +1,5 @@
-Welcome to Concrete Mixture Optimization's documentation!
-======================================
+Welcome to Concrete Strength's documentation!
+=============================================
 
 .. toctree::
    :maxdepth: 2

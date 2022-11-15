@@ -38,8 +38,8 @@ and "help wanted" is open to whoever wants to implement it.
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
-Concrete Mixture Strength Prediction could always use more documentation, whether as part of the
-official Concrete Mixture Strength Prediction docs, in docstrings, or even on the web in blog posts,
+Concrete Strength could always use more documentation, whether as part of the
+official Concrete Strength docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
 Submit Feedback

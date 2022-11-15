@@ -1,6 +1,6 @@
-=============================
-Concrete Mixture Strength Prediction
-=============================
+============================
+Concrete Strength
+============================
 
 
 .. image:: https://img.shields.io/pypi/v/concrete_strength_prediction.svg

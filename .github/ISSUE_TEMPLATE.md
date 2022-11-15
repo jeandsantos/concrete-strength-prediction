@@ -1,4 +1,4 @@
-* Concrete Mixture Optimization version:
+* Concrete Strength version:
 * Python version:
 * Operating System:
 
