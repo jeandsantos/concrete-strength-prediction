@@ -26,7 +26,7 @@ BROWSER := python -c "$$BROWSER_PYSCRIPT"
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
-bump: 
+bump: ## update package version with bumpversion
 	bumpversion ${part}
 
 clean: clean-build clean-pyc clean-test ## remove all build, test, coverage and Python artifacts
