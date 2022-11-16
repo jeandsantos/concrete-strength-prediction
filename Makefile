@@ -28,6 +28,8 @@ help:
 
 bump: ## update package version with bumpversion
 	bumpversion ${part}
+	git push
+	git push --tags
 
 clean: clean-build clean-pyc clean-test ## remove all build, test, coverage and Python artifacts
 
