@@ -1,8 +1,8 @@
 language: python
 
 python:
-  - 3.9
-  - 3.8
+- 3.9
+- 3.8
 
 install: pip install -U tox-travis
 
@@ -12,7 +12,7 @@ script:
 after_success:
 - make docs
 
-before_deploy: 
+before_deploy:
 - make release
 
 deploy:
@@ -21,11 +21,10 @@ deploy:
   skip_existing: true
   username: __token__
   password:
-dd:
-  secure: xONRwuzI5I+0ra7FeDudRIUmjoRe3shl3J9dpnCC/lQLW8gtYdczEenLDrvwkBTkIjSeQoOzlerbxh9DhEUYJcJSw5Ie1g3AyBF/6Fe5QBXu/JrNXuUkDrRJU7K/CorW5JOIKCWNyPcs5t5vdT3Z93nT9gBznJ6eLbZviiMll98U3wtxEbkHgmO/KIesaNy9ayzoI+nJawj9WajAAqWYs72z8iRdtNPBCJ5mlIRL8cYdDNNhGMhP2L2Vvj7vvfN5e51+pQbyDAYSoqawW8QeZfho2vovISnvMSlS9LRl8rTPVsxvHAMZ+1+r4fhoxXW6dF1gD2l2GvR3XsLeCyCBIhE6T4ZIa+m6e1qQXU6NVegwYgoohWAXfoCWdHh36xGPx5EYzEEg1pGY5PmGNowo6+d5qIkLa5ThKM5Dg+68Jyy+vfiNGchGoIYg3YBBFDFqM9Tp4IpDc4PfRttVeIQlrHEs1bJrdTi4JGmbO3jrUkjdVbpiou5bIk7eKzLDDScSLakvY014tkWeEwJR2pbYGX3Hibjg3KbkBUPpFPpt6gwJnf3kUtJATc3P63nze2pBOryyP29QDSblbeT7IocXuVxutjIvujn5z5ue+nQLFLhCbJKoZ+5kOIGGaUm0VXw01FPdQOYJ2E+pZagniohuwSClzJrl11yI80qdO3SQEzE=
+    secure: Y7M87EAqje8Z/zXWaQpd9A3I5mJRyDprFtfzw++Hnng3m6sI666Zs4DMFJKFL0l2xI8VV5Za1ctN5Dq3iWxQ8R0+vwIeCW2bwcxODktjYfJYQFePUwB2pfKbFAGKxHZhqzv9p/wxh8muF0K744j5RZXEP7ZA4Q91aCYtrgf0K7HU4lCLqWYNiphgwyXdZHucE8NU9mCvLde8V77n79/2NQ7aRlnhrT7olpWaqWfh4+I6PUah1jdb6kz1biUGrTQP0O+14dt2XE/0hCibqkwaAdGByU+dRux1dbmmUSPcNcx2qw3OY4ZB2ThZs7hk9do7UG1p8k0mAd9yW0aT2rs1vaydatCqM1aTju4vH2bD1A9uGFQrmX90u5kxBW02MXfEvIRLI1eTdrsL8Lgm9Runy4pwXP4YR5zShxG6ZxS3x8101JfQUPSSBivlaVpa80SVIfkyGOwFwk5iXVoYbz0YK0YbKPOs1W0gVVEBrCRqWMZXbUaQmuATfq8lg8WJ4cEyUpt5rTQvhjsaBafImU6QPmZ4LmtikPJUzXtoXbiM+UhFEWtQPqZD0tEEzO50YgU/yaKAzzTuA0jkhPqkfkXEPMyTr/Hos6eMpR5O/1R8XGg7sVm+XvF+OSle7HChKWnJg2FDI58098BY++7YtrvdUcD35Q3CCJMGcfZG5Gu4+VM=
 on:
-  tags: true
   python: 3.9
   branch: main
+  tags: false
 
-after_deploy: "echo 'Deployment Completed'"
+after_deploy: echo 'Deployment Completed'
