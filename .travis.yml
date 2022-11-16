@@ -17,14 +17,15 @@ before_deploy:
 
 deploy:
   provider: pypi
+  distributions: sdist bdist_wheel
+  skip_existing: true
   username: __token__
   password:
-  distributions: "sdist bdist_wheel"
-  skip_existing: true
 dd:
   secure: xONRwuzI5I+0ra7FeDudRIUmjoRe3shl3J9dpnCC/lQLW8gtYdczEenLDrvwkBTkIjSeQoOzlerbxh9DhEUYJcJSw5Ie1g3AyBF/6Fe5QBXu/JrNXuUkDrRJU7K/CorW5JOIKCWNyPcs5t5vdT3Z93nT9gBznJ6eLbZviiMll98U3wtxEbkHgmO/KIesaNy9ayzoI+nJawj9WajAAqWYs72z8iRdtNPBCJ5mlIRL8cYdDNNhGMhP2L2Vvj7vvfN5e51+pQbyDAYSoqawW8QeZfho2vovISnvMSlS9LRl8rTPVsxvHAMZ+1+r4fhoxXW6dF1gD2l2GvR3XsLeCyCBIhE6T4ZIa+m6e1qQXU6NVegwYgoohWAXfoCWdHh36xGPx5EYzEEg1pGY5PmGNowo6+d5qIkLa5ThKM5Dg+68Jyy+vfiNGchGoIYg3YBBFDFqM9Tp4IpDc4PfRttVeIQlrHEs1bJrdTi4JGmbO3jrUkjdVbpiou5bIk7eKzLDDScSLakvY014tkWeEwJR2pbYGX3Hibjg3KbkBUPpFPpt6gwJnf3kUtJATc3P63nze2pBOryyP29QDSblbeT7IocXuVxutjIvujn5z5ue+nQLFLhCbJKoZ+5kOIGGaUm0VXw01FPdQOYJ2E+pZagniohuwSClzJrl11yI80qdO3SQEzE=
 on:
   tags: true
+  python: 3.9
   branch: main
 
 after_deploy: "echo 'Deployment Completed'"
