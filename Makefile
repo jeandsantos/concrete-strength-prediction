@@ -84,7 +84,7 @@ servedocs: docs ## compile the docs watching for changes
 
 release: dist ## package and upload a release
 	pip install twine
-	twine --verbose upload dist/*
+	twine upload --verbose --skip-existing dist/*
 
 dist: clean ## builds source and wheel package
 	python setup.py sdist
