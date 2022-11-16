@@ -4,12 +4,10 @@ import pytest
 from pydantic import BaseModel
 from strictyaml import YAML
 
-from concrete_strength_prediction.config.core import (
-    PATH_CONFIG_FILE,
-    get_and_validate_config,
-    get_config_file_path,
-    get_config_from_file,
-)
+from concrete_strength_prediction.config.core import (PATH_CONFIG_FILE,
+                                                      get_and_validate_config,
+                                                      get_config_file_path,
+                                                      get_config_from_file)
 
 
 class TestGetConfigFilePath(object):
