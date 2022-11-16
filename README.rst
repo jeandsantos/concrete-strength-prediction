@@ -6,8 +6,8 @@ Concrete Strength
 .. image:: https://img.shields.io/pypi/v/concrete_strength_prediction.svg
         :target: https://pypi.python.org/pypi/concrete_strength_prediction
 
-.. image:: https://img.shields.io/travis/jeandsantos/concrete_strength_prediction.svg
-        :target: https://travis-ci.com/jeandsantos/concrete_strength_prediction
+.. image:: https://app.travis-ci.com/jeandsantos/concrete-strength-prediction.svg
+        :target: https://app.travis-ci.com/github/jeandsantos/concrete-strength-prediction
 
 .. image:: https://readthedocs.org/projects/concrete_strength_prediction/badge/?version=latest
         :target: https://concrete_strength_prediction.readthedocs.io/en/latest/?version=latest
