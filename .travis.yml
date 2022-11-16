@@ -21,10 +21,8 @@ deploy:
   password:
     secure: Y7M87EAqje8Z/zXWaQpd9A3I5mJRyDprFtfzw++Hnng3m6sI666Zs4DMFJKFL0l2xI8VV5Za1ctN5Dq3iWxQ8R0+vwIeCW2bwcxODktjYfJYQFePUwB2pfKbFAGKxHZhqzv9p/wxh8muF0K744j5RZXEP7ZA4Q91aCYtrgf0K7HU4lCLqWYNiphgwyXdZHucE8NU9mCvLde8V77n79/2NQ7aRlnhrT7olpWaqWfh4+I6PUah1jdb6kz1biUGrTQP0O+14dt2XE/0hCibqkwaAdGByU+dRux1dbmmUSPcNcx2qw3OY4ZB2ThZs7hk9do7UG1p8k0mAd9yW0aT2rs1vaydatCqM1aTju4vH2bD1A9uGFQrmX90u5kxBW02MXfEvIRLI1eTdrsL8Lgm9Runy4pwXP4YR5zShxG6ZxS3x8101JfQUPSSBivlaVpa80SVIfkyGOwFwk5iXVoYbz0YK0YbKPOs1W0gVVEBrCRqWMZXbUaQmuATfq8lg8WJ4cEyUpt5rTQvhjsaBafImU6QPmZ4LmtikPJUzXtoXbiM+UhFEWtQPqZD0tEEzO50YgU/yaKAzzTuA0jkhPqkfkXEPMyTr/Hos6eMpR5O/1R8XGg7sVm+XvF+OSle7HChKWnJg2FDI58098BY++7YtrvdUcD35Q3CCJMGcfZG5Gu4+VM=
   on:
-    branch: main
     tags: true
   distributions: "sdist bdist_wheel"
   skip_existing: true
-  skip_cleanup: true
 
 after_deploy: echo 'Deployment Completed'
