@@ -11,7 +11,9 @@ script:
 
 after_success:
 - make docs
-- make dist  
+
+before_deploy: 
+- make release
 
 deploy:
   provider: pypi
@@ -24,3 +26,5 @@ dd:
 on:
   tags: true
   branch: main
+
+after_deploy: "echo 'Deployment Completed'"
