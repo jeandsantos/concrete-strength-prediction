@@ -8,11 +8,11 @@ include *.md
 include *.txt
 
 recursive-include ./concrete_strength_prediction/*
+recursive-include ./concrete_strength_prediction/config/*.py
+recursive-include ./concrete_strength_prediction/utils/*.py
+recursive-include ./concrete_strength_prediction/*.py
 
 include ./concrete_strength_prediction/trained_models/*.pkl
 include ./concrete_strength_prediction/config.yml
-
-recursive-exclude * __pycache__
-recursive-exclude * *.py[co]
 
 recursive-include docs *.rst conf.py Makefile make.bat *.jpg *.png *.gif

@@ -10,7 +10,7 @@ Concrete Strength
         :target: https://app.travis-ci.com/github/jeandsantos/concrete-strength-prediction
 
 .. image:: https://readthedocs.org/projects/concrete_strength_prediction/badge/?version=latest
-        :target: https://concrete_strength_prediction.readthedocs.io/en/latest/?version=latest
+        :target: https://concrete-strength-prediction.readthedocs.io/en/latest/?version=latest
         :alt: Documentation Status
 
 
@@ -20,7 +20,7 @@ Optimization of concrete mixtures with machine learning models
 
 
 * Free software: MIT license
-* Documentation: https://concrete_strength_prediction.readthedocs.io.
+* Documentation: https://concrete-strength-prediction.readthedocs.io.
 
 
 Features
