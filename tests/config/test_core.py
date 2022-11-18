@@ -1,8 +1,7 @@
 from pathlib import Path
-
-import pytest
 from pydantic import BaseModel
 from strictyaml import YAML
+import pytest
 
 from concrete_strength_prediction.config.core import (PATH_CONFIG_FILE,
                                                       get_and_validate_config,
