@@ -111,4 +111,3 @@ def get_and_validate_config(config_parsed: YAML = None) -> Config:
 
 
 config = get_and_validate_config()
-print("Validation Completed")
