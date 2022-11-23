@@ -48,8 +48,11 @@ class PercentageTransformer(BaseEstimator, TransformerMixin):
     ) -> None:
 
         if not isinstance(col_numerator, list):
-            raise CustomTransformerError("col_numerator must be a list")
+            raise CustomTransformerError("'col_numerator' must be a list")
 
+        if len(col_numerator) == 0:
+            raise CustomTransformerError(f"'col_numerator' must be at least of length 1")
+        
         self.col_numerator = col_numerator
         self.col_denominator = col_denominator
 
@@ -88,6 +91,9 @@ class RatioTransformer(BaseEstimator, TransformerMixin):
 
         if not isinstance(col_denominator, list):
             raise CustomTransformerError("col_denominator must be a list")
+
+        if len(col_numerator) == 0 or len(col_denominator) == 0:
+            raise CustomTransformerError(f"'col_numerator' and 'col_denominator' must be at least of length 1")
 
         self.col_numerator = col_numerator
         self.col_denominator = col_denominator
