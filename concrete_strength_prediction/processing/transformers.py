@@ -1,24 +1,27 @@
-import numpy as np
 from typing import List
+
+import numpy as np
 from pandas import DataFrame
 from sklearn.base import BaseEstimator, TransformerMixin
 
+
 class CustomTransformerError(Exception):
     """An exception class for SumTransformer"""
+
 
 class SumTransformer(BaseEstimator, TransformerMixin):
     """
     Create feature with the sum of the values of selected columns
     """
 
-    def __init__(self, columns: List[str], col_name: str = 'cols_sum') -> None:
+    def __init__(self, columns: List[str], col_name: str = "cols_sum") -> None:
 
         if not isinstance(columns, list):
-            raise CustomTransformerError(f"'columns' must be a list")        
+            raise CustomTransformerError(f"'columns' must be a list")
 
         if len(columns) == 0:
             raise CustomTransformerError(f"'columns' must be at least of length 1")
-        
+
         self.columns = columns
         self.col_name = str(col_name)
 
@@ -40,7 +43,9 @@ class PercentageTransformer(BaseEstimator, TransformerMixin):
     Converts counts to percentages
     """
 
-    def __init__(self, col_numerator: List[str], col_denominator: List[str] = None) -> None:
+    def __init__(
+        self, col_numerator: List[str], col_denominator: List[str] = None
+    ) -> None:
 
         if not isinstance(col_numerator, list):
             raise CustomTransformerError("col_numerator must be a list")
@@ -61,9 +66,7 @@ class PercentageTransformer(BaseEstimator, TransformerMixin):
         elif isinstance(self.col_denominator, list):
             denomitator = X[self.col_denominator].sum(axis=1)
 
-        X[self.col_numerator] = X[self.col_numerator]\
-            .div(denomitator, axis=0)\
-            .mul(100)
+        X[self.col_numerator] = X[self.col_numerator].div(denomitator, axis=0).mul(100)
 
         return X
 
@@ -73,7 +76,12 @@ class RatioTransformer(BaseEstimator, TransformerMixin):
     Calculates ratios between one or more columns of a DataFrame
     """
 
-    def __init__(self, col_numerator: List[str], col_denominator: List[str], name: str ='cols_ratio') -> None:
+    def __init__(
+        self,
+        col_numerator: List[str],
+        col_denominator: List[str],
+        name: str = "cols_ratio",
+    ) -> None:
 
         if not isinstance(col_numerator, list):
             raise CustomTransformerError("col_numerator must be a list")
